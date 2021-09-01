@@ -19,14 +19,16 @@ body{
    width: 100%;
    font-family: "Poppins", sans-serif;
    place-items: center;
-   background: linear-gradient(315deg, #ffffff, #d7e1ec)
+   background: linear-gradient(315deg, #ffffff, #d7e1ec);
+   background-image: url("https://i.pinimg.com/originals/c1/8a/4b/c18a4b6375696480aa7567b6b500f282.png");
+   
 } 
 
 /* .wrapper {
    display: inline-flex
 } */
 
-.wrapper > .icon  {
+.wrapper .icon  {
    position: relative;
    background-color: #ffffff;
    border-radius: 50%;
@@ -43,7 +45,7 @@ body{
    transition: all 0.2s linear;
 }
 
-.wrapper > .icon > .tooltip{
+.wrapper .icon  .tooltip{
    position: absolute;
    padding: 8px;
    left: 50px;
@@ -57,7 +59,7 @@ body{
    transition: all 0.3s linear;
 }
 
-.wrapper > .icon > .tooltip::after {
+.wrapper  .icon  .tooltip::after {
    position: absolute;
    content: "";
    height: 8px;
@@ -71,12 +73,57 @@ body{
 }
 
 
-.wrapper > .icon:hover > .tooltip {
+.wrapper  .icon:hover  .tooltip {
    left : 60px;
    opacity: 1;
    visibility: visible;
    pointer-events: auto; 
 }
+
+
+
+
+summary{
+   display: block
+}
+
+summary:hover {
+   cursor: pointer;
+ 
+}
+
+
+summary:before{
+   border-radius: 50%;
+   height: 50px;
+   width: 50px;
+   display: block;
+   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+   content: "+";
+   text-align: center;
+   line-height: 50px;
+   font-size: 30px;
+   font-weight: bold;
+   background-color: #ffffff;
+}
+
+
+details[open] summary:before{
+   border-radius: 50%;
+   height: 50px;
+   width: 50px;
+   display: block;
+   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+   content: "-";
+   text-align: center;
+   line-height: 50px;
+   font-size: 30px;
+   font-weight: bold;
+   background-color: #4d4b4b;
+   color: #ffffff;
+   margin-left: 10px;
+}
+
 
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tooltip,
