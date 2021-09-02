@@ -105,6 +105,7 @@ summary:before{
    font-size: 30px;
    font-weight: bold;
    background-color: #ffffff;
+   transition: all 0.5s linear;
 }
 
 
@@ -114,15 +115,26 @@ details[open] summary:before{
    width: 50px;
    display: block;
    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
-   content: "-";
+   /* content: "-"; */
    text-align: center;
-   line-height: 50px;
+   line-height: 55px;
+   align-items: center;
    font-size: 30px;
    font-weight: bold;
    background-color: #4d4b4b;
    color: #ffffff;
    margin-left: 10px;
+   transform: rotate(45deg);
 }
+
+details[open] summary ~ * {
+   animation: sweep 0.5s ease-in-out;
+ }
+ 
+ @keyframes sweep {
+   0%    {opacity: 0; transform: translateX(-10px)}
+   100%  {opacity: 1; transform: translateX(0)}
+ }
 
 
 .wrapper .facebook:hover,
